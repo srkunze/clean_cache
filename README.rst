@@ -1,5 +1,5 @@
-`CLEAN_CACHE <https://pypi.python.org/pypi/clean_cache>`_
-=========================================================
+`XCACHE <https://pypi.python.org/pypi/clean_cache>`_
+====================================================
 
 It's like `lru_caches <https://docs.python.org/3/library/functools.html#functools.lru_cache>`_ but can be cleared automatically or via context managers.
 
