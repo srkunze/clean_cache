@@ -7,7 +7,7 @@ It's like `lru_caches <https://docs.python.org/3/library/functools.html#functool
 Why?
 ----
 
-`There are only two hard things in Computer Science: cache invalidation and naming things. http://martinfowler.com/bliki/TwoHardThings.html`_
+`There are only two hard things in Computer Science: cache invalidation and naming things. <http://martinfowler.com/bliki/TwoHardThings.html>`_
 
 -- Phil Karlton
 
