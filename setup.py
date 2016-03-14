@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 from setuptools import setup
 
 setup(
-    name='clean_cache',
-    version='0.7',
+    name='xcache',
+    version='0.1',
     description='clean caches when needed',
     author='Sven R. Kunze',
     author_email='srkunze@mail.de',
@@ -19,6 +19,6 @@ setup(
         'Programming Language :: Python',
     ],
 
-    py_modules=['clean_cache'],
+    py_modules=['xcache'],
     install_requires=[],
 )
