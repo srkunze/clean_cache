@@ -3,6 +3,10 @@ from contextlib import contextmanager
 from functools import lru_cache as _lru_cache, wraps
 from threading import local
 
+__version__ = '0.2'
+__version_info__ = (0, 2)
+__all__ = ['ref_cache', 'ref_cache_gen', 'clean_caches']
+
 
 _thread_local = local()
 _thread_local._ref = type('DefaultRef', (object,), {})()

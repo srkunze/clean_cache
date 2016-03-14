@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='clean_cache',
-    version='0.1',
+    version='0.2',
     description='clean caches when needed',
     author='Sven R. Kunze',
     author_email='srkunze@mail.de',
