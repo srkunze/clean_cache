@@ -119,5 +119,7 @@ Good
 Bad
 ***
 
-- no drawbacks discovered so far ;-)
-- ideas are welcome :-)
+- unkown ;-)
+
+
+Ideas are always welcome. :-)
