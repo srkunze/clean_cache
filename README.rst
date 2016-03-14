@@ -103,7 +103,7 @@ You can even specify what object the caches should be attached to:
 Can these context managers be nested?
 -------------------------------------
 
-Sure. At each entrance and and exit of each context, all associated caches are empty.
+Sure. At each entrance and and exit of each context, all associated caches are emptied.
 
 
 Conclusion
