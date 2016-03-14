@@ -36,6 +36,7 @@ Here, we defined our own cache that needs the global request for invalidating th
 As soon as ``request`` is garbage-collected, the cached data is freed.
 
 .. code:: python
+
     @request_cache()
     def fib(n):
         return fib(n-1) + fib(n-2) if n > 1 else 1
