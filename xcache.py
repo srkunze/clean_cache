@@ -3,16 +3,16 @@ from contextlib import contextmanager
 from functools import lru_cache as _lru_cache, wraps
 from threading import local
 
-__version__ = '0.1'
-__version_info__ = (0, 1)
-__all__ = ['ref_cache', 'ref_cache_gen', 'clean_caches']
+__version__ = '0.2'
+__version_info__ = (0, 2)
+__all__ = ['cached', 'cache_gen', 'clean_caches']
 
 
 _thread_local = local()
 _thread_local._ref = type('DefaultRef', (object,), {})()
 
 
-def ref_cache_gen(ref_gen, cache_impl=_lru_cache):
+def cache_gen(ref_gen, cache_impl=_lru_cache):
     def ref_cache(*cache_args, **cache_kwargs):
         def decorating_function(user_function):
             @wraps(user_function)
@@ -45,7 +45,7 @@ def ref_cache_gen(ref_gen, cache_impl=_lru_cache):
     return ref_cache
 
 
-ref_cache = ref_cache_gen(lambda: _thread_local._ref)
+cached = cache_gen(lambda: _thread_local._ref)
 
 
 @contextmanager

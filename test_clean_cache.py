@@ -1,6 +1,6 @@
 from threading import local
 
-from xcache import ref_cache_gen, ref_cache, clean_caches
+from xcache import cache_gen, cached, clean_caches
 
 
 class Request:
@@ -12,15 +12,15 @@ class TemporaryObject:
 
 
 globaldata = local()
-request_cache = ref_cache_gen(lambda: getattr(globaldata, 'request', None))
+request_cache = cache_gen(lambda: getattr(globaldata, 'request', None))
 
 
-@ref_cache(maxsize=None)
+@cached(maxsize=None)
 def fib(n):
     return fib(n-1) + fib(n-2) if n > 1 else 1
 
 
-@ref_cache(maxsize=None)
+@cached(maxsize=None)
 def fib2(n):
     return fib2(n-2) + fib2(n-3) if n > 1 else 1
 

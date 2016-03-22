@@ -27,9 +27,9 @@ Python features garbage collection aka. automatic memory management. Let's make 
 
 .. code:: python
 
-    from xcache import ref_cache
+    from xcache import cache_gen
 
-    request_cache = ref_cache_gen(lambda: request)  # default cache_impl=lru_cache
+    request_cache = cache_gen(lambda: request)  # default cache_impl=lru_cache
 
 
 Here, we defined our own cache that needs the global request for invalidating the cache.
@@ -70,9 +70,9 @@ If you need more control, the context manager ``clean_caches`` is what you need:
 
 .. code:: python
 
-    from xcache import ref_cache, clean_caches
+    from xcache import cached, clean_caches
 
-    @ref_cache()
+    @cached()
     def fib(n):
         return fib(n-1) + fib(n-2) if n > 1 else 1
 
@@ -87,9 +87,7 @@ You can even specify what object the caches should be attached to:
 
 .. code:: python
 
-    from xcache import ref_cache, clean_caches
-
-    @ref_cache()
+    @cached()
     def fib(n):
         return fib(n-1) + fib(n-2) if n > 1 else 1
 
