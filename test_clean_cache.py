@@ -1,6 +1,6 @@
 from threading import local
 
-from clean_cache import ref_cache_gen, ref_cache, clean_caches
+from xcache import ref_cache_gen, ref_cache, clean_caches
 
 
 class Request:

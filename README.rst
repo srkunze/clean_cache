@@ -1,5 +1,5 @@
-`XCACHE <https://pypi.python.org/pypi/clean_cache>`_
-====================================================
+`XCACHE <https://pypi.python.org/pypi/xcache>`_
+===============================================
 
 It's like `lru_caches <https://docs.python.org/3/library/functools.html#functools.lru_cache>`_ but can be cleared automatically or via context managers.
 
@@ -27,7 +27,7 @@ Python features garbage collection aka. automatic memory management. Let's make 
 
 .. code:: python
 
-    from clean_cache import ref_cache
+    from xcache import ref_cache
 
     request_cache = ref_cache_gen(lambda: request)  # default cache_impl=lru_cache
 
@@ -70,7 +70,7 @@ If you need more control, the context manager ``clean_caches`` is what you need:
 
 .. code:: python
 
-    from clean_cache import ref_cache, clean_caches
+    from xcache import ref_cache, clean_caches
 
     @ref_cache()
     def fib(n):
@@ -87,7 +87,7 @@ You can even specify what object the caches should be attached to:
 
 .. code:: python
 
-    from clean_cache import ref_cache, clean_caches
+    from xcache import ref_cache, clean_caches
 
     @ref_cache()
     def fib(n):

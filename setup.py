@@ -10,7 +10,7 @@ setup(
     description='clean caches when needed',
     author='Sven R. Kunze',
     author_email='srkunze@mail.de',
-    url='https://github.com/srkunze/clean_cache',
+    url='https://github.com/srkunze/xcache',
     license='MIT',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
